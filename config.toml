@@ -1,3 +1,37 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "http://blog.zhanxiaobai.com/"
+defaultContentLanguage = "zh-cn"
+title = "展小白的博客"
+theme = "hugo-coder"
+
+[[languages.zh-cn.menu.main]]
+name = "文章"
+weight = 1
+url = "posts/"
+
+[[languages.zh-cn.menu.main]]
+name = "关于"
+weight = 2
+url = "about/"
+
+[params]
+avatarURL = "images/avatar.jpeg"
+author = "展小白"
+info = ["互联网开发，个人技术随想"]
+description = "展小白的个人博客"
+keywords = "blog,developer,personal"
+dateFormat = "2006-01-02"
+colorScheme = "auto"
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-2x fa-github"
+weight = 1
+url = "https://github.com/zhanbai/"
+
+[[params.social]]
+name = "RSS"
+icon = "fa fa-2x fa-rss"
+weight = 2
+url = "https://blog.zhanxiaobai.com/index.xml"
+rel = "alternate"
+type = "application/rss+xml"
