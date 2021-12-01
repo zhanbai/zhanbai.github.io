@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>展小白的博客</title>
+    <link>http://blog.zhanxiaobai.com/</link>
+    <description>Recent content on 展小白的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 01 Dec 2021 14:22:44 +0800</lastBuildDate><atom:link href="http://blog.zhanxiaobai.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Hugo 和 GitHub Pages 构建免费博客网站</title>
+      <link>http://blog.zhanxiaobai.com/posts/1/</link>
+      <pubDate>Wed, 01 Dec 2021 14:22:44 +0800</pubDate>
+      
+      <guid>http://blog.zhanxiaobai.com/posts/1/</guid>
+      <description>本文介绍如何使用 Hugo 和 Github Pages 来构建、维护和管理免费的博客网站。
+ 基于 MacOS 系统，另外前提需要安装 Git 工具。
+ 关于 Hugo    Hugo 是基于 Go 语言开发的开源静态站点生成器，具有快速、灵活的特点。
+安装 Hugo    brew install hugo 验证是否安装成功：
+hugo version 创建一个新的网站    hugo new site myblog 配置主题    本文使用了简单、轻量的 Coder 主题。
+cd myblog git init git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder 编辑根目录下配置文件 config.toml，具体参数可以参考 themes/hugo-coder/exampleSite/config.toml 例子中的配置。
+以下是我使用的比较精简的配置参数：
+baseURL = &amp;#34;http://blog.zhanxiaobai.com/&amp;#34; defaultContentLanguage = &amp;#34;zh-cn&amp;#34; title = &amp;#34;展小白的博客&amp;#34; theme = &amp;#34;hugo-coder&amp;#34; [[languages.</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>http://blog.zhanxiaobai.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.zhanxiaobai.com/about/</guid>
+      <description>展小白，生于 1991 年。
+Web 开发从业者，同时也是自由软件的倡导者和拥护者。
+现就职于杭州一家互联网创业公司，从事项目研发和管理工作。
+业余时间，喜欢看书，写作，上网，健身。</description>
+    </item>
+    
+  </channel>
+</rss>
