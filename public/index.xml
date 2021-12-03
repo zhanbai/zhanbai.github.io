@@ -5,15 +5,28 @@
     <link>http://blog.zhanxiaobai.com/</link>
     <description>Recent content on 展小白的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Dec 2021 11:06:51 +0800</lastBuildDate><atom:link href="http://blog.zhanxiaobai.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Dec 2021 10:33:37 +0800</lastBuildDate><atom:link href="http://blog.zhanxiaobai.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自建 Go Web 框架：快速开始</title>
+      <link>http://blog.zhanxiaobai.com/posts/3/</link>
+      <pubDate>Fri, 03 Dec 2021 10:33:37 +0800</pubDate>
+      
+      <guid>http://blog.zhanxiaobai.com/posts/3/</guid>
+      <description>Go 非常适合于开发 Web 应用程序，基于其简单、丰富的库，我们可以自己搭建 Go Web 框架。
+ 本教程基于 MacOS 系统
+ 初始化项目    借助 Go 管理依赖，我们可以在任意你喜欢的目录创建 Go 项目，这里我们在家目录创建本项目：
+$ cd $ mkdir gos $ cd gos 启动依赖追踪项    $ go mod init gos go: creating new go.mod: module gos 使用 VSCode 编辑器创建 main.go 文件    package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; ) func handleFunc(w http.ResponseWriter, r *http.Request) { fmt.Fprint(w, &amp;#34;&amp;lt;h1&amp;gt;Hello，这里是 Gos！&amp;lt;/h1&amp;gt;&amp;#34;) } func main() { http.</description>
+    </item>
+    
     <item>
       <title>搭建 Go 开发环境</title>
       <link>http://blog.zhanxiaobai.com/posts/2/</link>
       <pubDate>Thu, 02 Dec 2021 11:06:51 +0800</pubDate>
       
       <guid>http://blog.zhanxiaobai.com/posts/2/</guid>
-      <description>本文介绍 Go 开发环境的搭建，基于 MacOS 系统。
-关于 Go    Go 是一门具有表现力、简洁、干净和高效的，支持高并发的开源静态编译型语言。
+      <description>本文介绍 Go 开发环境的搭建。
+ 本教程基于 MacOS 系统
+ 关于 Go    Go 是一门具有表现力、简洁、干净和高效的，支持高并发的开源静态编译型语言。
 安装    首先，下载 Go for Mac 软件包，然后打开按照提示进行安装。Go 发行版将会被安装到 /usr/local/go 目录，/usr/local/go/bin 也将被加入 PATH 环境变量，然后重启终端将会生效。
 验证是否安装成功：
 $ go version 编写程序    推荐使用 VSCode 编写程序，并安装 Go 扩展。
