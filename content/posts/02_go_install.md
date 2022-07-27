@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2021-12-02T11:06:51+08:00
 title = "搭建 Go 开发环境"
 description = ""
