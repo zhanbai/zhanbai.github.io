@@ -56,4 +56,6 @@ t tree
 
 ## 参见
 
-无
+`string` 的有关文档（https://golang.google.cn/ref/spec#String_literals）。
+
+`rune` 的有关文档（https://golang.google.cn/ref/spec#Rune_literals）。

@@ -46,7 +46,6 @@ func main() {
 	fmt.Println(replace(s, "green", 12, 4))
 	creditCard := "4111 1111 1111 1111"
 	fmt.Println(replace(creditCard, "xxxx ", 0, len([]rune(creditCard))-4))
-	fmt.Println(replace(s, "Title: ", 0, 0))
 }
 ```
 
