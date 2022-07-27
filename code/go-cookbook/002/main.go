@@ -8,7 +8,7 @@ func main() {
 	username = string([]rune(username)[:8])
 	fmt.Println(username)
 
-	str := "watch out for that tree"
-	str = string([]rune(str)[17:])
-	fmt.Println(str)
+	s := "watch out for that tree"
+	s = string([]rune(s)[17:])
+	fmt.Println(s)
 }

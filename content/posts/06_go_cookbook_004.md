@@ -28,10 +28,10 @@ import (
 )
 
 func main() {
-	str := "This weekend, I'm going shopping for a pet chicken."
+	s := "This weekend, I'm going shopping for a pet chicken."
 	vowels := 0
-	for _, val := range str {
-		if strings.Index("aeiouAEIOU", string(val)) != -1 {
+	for _, v := range s {
+		if strings.Index("aeiouAEIOU", string(v)) != -1 {
 			vowels++
 		}
 	}

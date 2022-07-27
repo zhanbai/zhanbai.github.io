@@ -42,9 +42,9 @@ package main
 import "fmt"
 
 func main() {
-	str := "watch out for that tree"
-	str = string([]rune(str)[17:])
-	fmt.Println(str)
+	s := "watch out for that tree"
+	s = string([]rune(s)[17:])
+	fmt.Println(s)
 }
 ```
 

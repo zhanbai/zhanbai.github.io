@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"strings"
 )
 
 func lookandsay(s string) string {
@@ -32,18 +33,18 @@ func lookandsay(s string) string {
 }
 
 func main() {
-	// str := "This weekend, I'm going shopping for a pet chicken."
-	// vowels := 0
-	// for _, val := range str {
-	// 	if strings.Index("aeiouAEIOU", string(val)) != -1 {
-	// 		vowels++
-	// 	}
-	// }
-	// fmt.Println(vowels)
-
-	s := "1"
-	for i := 0; i < 10; i++ {
-		s = lookandsay(s)
-		fmt.Println(s)
+	s := "This weekend, I'm going shopping for a pet chicken."
+	vowels := 0
+	for _, v := range s {
+		if strings.Index("aeiouAEIOU", string(v)) != -1 {
+			vowels++
+		}
 	}
+	fmt.Println(vowels)
+
+	// s := "1"
+	// for i := 0; i < 10; i++ {
+	// 	s = lookandsay(s)
+	// 	fmt.Println(s)
+	// }
 }
