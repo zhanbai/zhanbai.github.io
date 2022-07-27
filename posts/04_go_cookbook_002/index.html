@@ -1,0 +1,46 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="zh-cn"><meta name=color-scheme content="light dark"><meta name=author content="展白"><meta name=description content="问题 希望从字符串中的某个特定位置开始抽取这个字符串的一部分。例如，对于输入到一个表单的用户名，想要得到这个用户名的前 8 个字符。
+解决方案 使用 string 和 rune 选择子串，如下所示：
+package main import &#34;fmt&#34; func main() { // 用法：string([]rune(str)[start:start+length]) username := &#34;zhanbai展白&#34; username = string([]rune(username)[:8]) fmt.Println(username) } 讨论 string 和 rune 结合可以完全不用考虑 unicode 字节问题，一个中文就只占一个数组下标。start 和 length 必须是正整数并且不能超过字符串长度，start 可以忽略，即从 0 开始，以上会返回从 start 开始的 length 个字符。字符中的第一个位置为 0。如果忽略 start+length，会返回从 start 到原字符串末尾的子串，如下所示：
+package main import &#34;fmt&#34; func main() { str := &#34;watch out for that tree&#34; str = string([]rune(str)[17:]) fmt.Println(str) } 输出如下：
+t tree 参见 无"><meta name=keywords content="blog,developer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Go 实例：抽取子串"><meta name=twitter:description content="问题 希望从字符串中的某个特定位置开始抽取这个字符串的一部分。例如，对于输入到一个表单的用户名，想要得到这个用户名的前 8 个字符。
+解决方案 使用 string 和 rune 选择子串，如下所示：
+package main import &#34;fmt&#34; func main() { // 用法：string([]rune(str)[start:start+length]) username := &#34;zhanbai展白&#34; username = string([]rune(username)[:8]) fmt.Println(username) } 讨论 string 和 rune 结合可以完全不用考虑 unicode 字节问题，一个中文就只占一个数组下标。start 和 length 必须是正整数并且不能超过字符串长度，start 可以忽略，即从 0 开始，以上会返回从 start 开始的 length 个字符。字符中的第一个位置为 0。如果忽略 start+length，会返回从 start 到原字符串末尾的子串，如下所示：
+package main import &#34;fmt&#34; func main() { str := &#34;watch out for that tree&#34; str = string([]rune(str)[17:]) fmt.Println(str) } 输出如下：
+t tree 参见 无"><meta property="og:title" content="Go 实例：抽取子串"><meta property="og:description" content="问题 希望从字符串中的某个特定位置开始抽取这个字符串的一部分。例如，对于输入到一个表单的用户名，想要得到这个用户名的前 8 个字符。
+解决方案 使用 string 和 rune 选择子串，如下所示：
+package main import &#34;fmt&#34; func main() { // 用法：string([]rune(str)[start:start+length]) username := &#34;zhanbai展白&#34; username = string([]rune(username)[:8]) fmt.Println(username) } 讨论 string 和 rune 结合可以完全不用考虑 unicode 字节问题，一个中文就只占一个数组下标。start 和 length 必须是正整数并且不能超过字符串长度，start 可以忽略，即从 0 开始，以上会返回从 start 开始的 length 个字符。字符中的第一个位置为 0。如果忽略 start+length，会返回从 start 到原字符串末尾的子串，如下所示：
+package main import &#34;fmt&#34; func main() { str := &#34;watch out for that tree&#34; str = string([]rune(str)[17:]) fmt.Println(str) } 输出如下：
+t tree 参见 无"><meta property="og:type" content="article"><meta property="og:url" content="http://blog.zhanxiaobai.com/posts/04_go_cookbook_002/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-07-27T09:22:13+08:00"><meta property="article:modified_time" content="2022-07-27T09:22:13+08:00"><title>Go 实例：抽取子串 · 展白的博客</title><link rel=canonical href=http://blog.zhanxiaobai.com/posts/04_go_cookbook_002/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.ccbbada2e264e4fdbf9b2181cccc2cdb289a63dc9520a1e96ac2b9a45778df29.css integrity="sha256-zLutouJk5P2/myGBzMws2yiaY9yVIKHpasK5pFd43yk=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.101.0"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>展白的博客</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>文章</a></li><li class=navigation-item><a class=navigation-link href=/about/>关于</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://blog.zhanxiaobai.com/posts/04_go_cookbook_002/>Go 实例：抽取子串</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2022-07-27T09:22:13+08:00>2022-07-27</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+阅读时间：1 分钟</span></div></div></header><div><h2 id=问题>问题
+<a class=heading-link href=#%e9%97%ae%e9%a2%98><i class="fa fa-link" aria-hidden=true></i></a></h2><p>希望从字符串中的某个特定位置开始抽取这个字符串的一部分。例如，对于输入到一个表单的用户名，想要得到这个用户名的前 8 个字符。</p><h2 id=解决方案>解决方案
+<a class=heading-link href=#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88><i class="fa fa-link" aria-hidden=true></i></a></h2><p>使用 <code>string</code> 和 <code>rune</code> 选择子串，如下所示：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> <span style=color:#e6db74>&#34;fmt&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>main</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#75715e>// 用法：string([]rune(str)[start:start+length])
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>username</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;zhanbai展白&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>username</span> = string([]rune(<span style=color:#a6e22e>username</span>)[:<span style=color:#ae81ff>8</span>])
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Println</span>(<span style=color:#a6e22e>username</span>)
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=讨论>讨论
+<a class=heading-link href=#%e8%ae%a8%e8%ae%ba><i class="fa fa-link" aria-hidden=true></i></a></h2><p><code>string</code> 和 <code>rune</code> 结合可以完全不用考虑 unicode 字节问题，一个中文就只占一个数组下标。start 和 length 必须是正整数并且不能超过字符串长度，start 可以忽略，即从 0 开始，以上会返回从 start 开始的 length 个字符。字符中的第一个位置为 0。如果忽略 start+length，会返回从 start 到原字符串末尾的子串，如下所示：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> <span style=color:#e6db74>&#34;fmt&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>main</span>() {
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>str</span> <span style=color:#f92672>:=</span> <span style=color:#e6db74>&#34;watch out for that tree&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>str</span> = string([]rune(<span style=color:#a6e22e>str</span>)[<span style=color:#ae81ff>17</span>:])
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Println</span>(<span style=color:#a6e22e>str</span>)
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>输出如下：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>t tree
+</span></span></code></pre></div><h2 id=参见>参见
+<a class=heading-link href=#%e5%8f%82%e8%a7%81><i class="fa fa-link" aria-hidden=true></i></a></h2><p>无</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2022
+展白
+·
+技术支持 <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script></body></html>
