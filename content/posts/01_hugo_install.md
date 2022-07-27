@@ -54,7 +54,7 @@ $ git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-code
 ```toml
 baseURL = "http://blog.zhanxiaobai.com/"
 defaultContentLanguage = "zh-cn"
-title = "展小白的博客"
+title = "展白的博客"
 theme = "hugo-coder"
 
 [[languages.zh-cn.menu.main]]
@@ -69,9 +69,9 @@ url = "about/"
 
 [params]
 avatarURL = "images/avatar.jpeg"
-author = "展小白"
+author = "展白"
 info = ["互联网开发，个人技术随想"]
-description = "展小白的个人博客"
+description = "展白的个人博客"
 keywords = "blog,developer,personal"
 dateFormat = "2006-01-02"
 colorScheme = "auto"
