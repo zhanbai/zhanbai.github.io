@@ -11,12 +11,11 @@ func strRand(l int, chars string) string {
 	if chars == "" {
 		chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	}
-	charsLen := len(chars)
 	str := ""
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	for i := l; i > 0; i-- {
-		str += string(chars[r.Intn(charsLen)])
+		str += string(chars[r.Intn(len(chars))])
 	}
 
 	return str
