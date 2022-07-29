@@ -33,7 +33,7 @@ func strRand(l int, chars string) string {
 	if chars == "" {
 		chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	}
-	charsLen := len(chars) - 1
+	charsLen := len(chars)
 	str := ""
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
