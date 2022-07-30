@@ -40,4 +40,5 @@ $ cd myblog $ git init $ git submodule add https://github.com/luizdepra/hugo-cod
 baseURL = &amp;#34;http://blog.zhanxiaobai.com/&amp;#34; defaultContentLanguage = &amp;#34;zh-cn&amp;#34; title = &amp;#34;展白的博客&amp;#34; theme = &amp;#34;hugo-coder&amp;#34; [[languages.zh-cn.menu.main]] name = &amp;#34;文章&amp;#34; weight = 1 url = &amp;#34;posts/&amp;#34; [[languages.</description></item><item><title>关于</title><link>http://blog.zhanxiaobai.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://blog.zhanxiaobai.com/about/</guid><description>展白，生于 1991 年。
 Web 开发从业者，同时也是自由软件的倡导者和拥护者。
 现就职于杭州一家互联网创业公司，从事项目研发和管理工作。
-业余时间，喜欢看书，写作，上网，健身。</description></item></channel></rss>
+业余时间，喜欢看书，写作，上网，健身。
+阅读列表 2022.07.30《一句顶一万句》</description></item></channel></rss>
