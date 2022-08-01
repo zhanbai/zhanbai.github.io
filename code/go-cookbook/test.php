@@ -1,30 +1,49 @@
 <?php
-function lookandsay($s)
+function tab_expand($text)
 {
-    // 将返回值初始化为一个空串
-    $r = "";
-    // m 包含要统计的字符，初始化为字符串中的第一个字符
-    $m = $s[0];
-    // n 是已经查看过的 m 个数，初始化为 1
-    $n = 1;
-    for ($i = 1; $i < strlen($s); $i++) {
-        // 如果这个字符与上一个相同
-        if ($s[$i] === $m) {
-            // 将这个字符的个数增加 1
-            $n++;
-        } else {
-            // 否则，将字符个数和字符本身增加到返回值
-            $r .= $n . $m;
-            // 将要查找的字符设置为当前字符
-            $m = $s[$i];
-            // 并将字符个数重置为 1
-            $n = 1;
-        }
+    while (strstr($text, "\t")) {
+        $text = preg_replace_callback('/^([^\t\n]*)(\t+)/m', 'tab_expand_helper', $text);
     }
-    return $r . $n . $m;
+    return $text;
 }
 
-for ($i = 0, $s = "1"; $i < 10; $i++) {
-    $s = lookandsay($s);
-    print "$s\n";
+function tab_expand_helper($matches)
+{
+    $tab_stop = 8;
+
+    return $matches[1] . str_repeat(' ', strlen($matches[2]) * $tab_stop - (strlen($matches[1]) % $tab_stop));
 }
+
+function tab_unexpand($text)
+{
+    $tab_stop = 8;
+    $lines = explode("\n", $text);
+    foreach ($lines as $i => $line) {
+        // 将制表符扩展位空格
+        $line = tab_expand($line);
+        $chunks = str_split($line, $tab_stop);
+        $chunkCount = count($chunks);
+        // 扫描除最后一个字符块以外的所有其他字符块
+        for ($j = 0; $j < $chunkCount - 1; $j++) {
+            echo $chunks[$j] . "\n";
+            $chunks[$j] = preg_replace('/ {2,}$/', "\t", $chunks[$j]);
+            echo $chunks[$j] . "\n";
+        }
+        // 如果最后一个字符块是相当于制表符的空格
+        // 将它转换位一个制表符；否则，保持不变
+        if ($chunks[$chunkCount - 1] == str_repeat(' ', $tab_stop)) {
+            $chunks[$chunkCount - 1] = "\t";
+        }
+        // 重新组合字符块
+        $lines[$i] = implode('', $chunks);
+    }
+    // 重新组合文本行
+    return implode("\n", $lines);
+}
+
+$msg = '白日依山尽  黄河入海流	欲穷千里目	更上一层楼 白日依山尽  黄/河入海流    /    欲穷千里目 更上一层楼';
+// $spaced = tab_expand($msg);
+$tabbed = tab_unexpand($msg);
+
+// echo $spaced . "\n";
+echo $tabbed . "\n";
