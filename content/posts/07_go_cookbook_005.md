@@ -80,7 +80,7 @@ func main() {
 
 输出如下：
 
-```go
+```bash
 turtle. a was there time a upon Once
 ```
 
