@@ -17,7 +17,7 @@ series = []
 
 ## 解决方案
 
-自定义 `strrev` 方法按字节反转，如下所示：
+自定义 `strrev` 函数按字节反转，如下所示：
 
 ```go
 package main

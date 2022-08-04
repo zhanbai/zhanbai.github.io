@@ -26,7 +26,7 @@ newString := strings.Replace(s, old, new, n)
 
 ## 讨论
 
-下面封装了一个 `replace` 方法，方便替换从 start 到指定 length 长度的字符，其中 start 和 length 不可为负数。
+下面封装了一个 `replace` 函数，方便替换从 start 到指定 length 长度的字符，其中 start 和 length 不可为负数。
 
 ```go
 package main
