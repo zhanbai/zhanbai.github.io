@@ -113,8 +113,8 @@ func main() {
 ```
 ## 参见
 
-`os.Create` 的有关文档（https://golang.google.cn/pkg/os/#Create）。
+`os.Create` 的有关文档（https://pkg.go.dev/os/#Create）。
 
-`csv.Write` 的有关文档（https://golang.google.cn/pkg/encoding/csv/#Writer）。
+`csv.Write` 的有关文档（https://pkg.go.dev/encoding/csv/#Writer）。
 
-`bytes.Buffer` 的有关文档（https://golang.google.cn/pkg/bytes/#Buffer）。
+`bytes.Buffer` 的有关文档（https://pkg.go.dev/bytes/#Buffer）。

@@ -55,4 +55,4 @@ My circle's diameter is 20 inches.
 
 ## 参见
 
-`fmt.Sprint` 的有关文档（https://golang.google.cn/pkg/fmt/#Sprint）。
+`fmt.Sprint` 的有关文档（https://pkg.go.dev/fmt/#Sprint）。

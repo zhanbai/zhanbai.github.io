@@ -66,4 +66,4 @@ fmt.Println(strRand(16, ".-"))
 
 ## 参见
 
-`rand` 的有关文档（https://golang.google.cn/pkg/math/rand/）。
+`rand` 的有关文档（https://pkg.go.dev/math/rand/）。

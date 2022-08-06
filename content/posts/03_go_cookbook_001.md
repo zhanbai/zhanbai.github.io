@@ -41,4 +41,4 @@ func main() {
 
 ## 参见
 
-`strings.Index` 的有关文档，https://golang.google.cn/pkg/strings/#Index 。
+`strings.Index` 的有关文档，https://pkg.go.dev/strings/#Index 。

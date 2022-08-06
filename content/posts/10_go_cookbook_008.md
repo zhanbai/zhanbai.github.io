@@ -125,8 +125,8 @@ i programmed the wopr and the trs-80.
 
 ## 参见
 
-`strings.ToUpper` 的有关文档（https://golang.google.cn/pkg/strings/#ToUpper）。
+`strings.ToUpper` 的有关文档（https://pkg.go.dev/strings/#ToUpper）。
 
-`strings.ToLower` 的有关文档（https://golang.google.cn/pkg/strings/#ToLower）。
+`strings.ToLower` 的有关文档（https://pkg.go.dev/strings/#ToLower）。
 
-`strings.Title` 的有关文档（https://golang.google.cn/pkg/strings/#Title）。
+`strings.Title` 的有关文档（https://pkg.go.dev/strings/#Title）。

@@ -100,4 +100,4 @@ func main() {
 
 ## 参见
 
-`strings.Replace` 的有关文档（https://golang.google.cn/pkg/strings/#Replace）。
+`strings.Replace` 的有关文档（https://pkg.go.dev/strings/#Replace）。

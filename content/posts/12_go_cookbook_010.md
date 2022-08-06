@@ -52,8 +52,8 @@ name
 
 ## 参见
 
-`strings.TrimLeft` 的有关文档（https://golang.google.cn/pkg/strings/#TrimLeft）。
+`strings.TrimLeft` 的有关文档（https://pkg.go.dev/strings/#TrimLeft）。
 
-`strings.TrimRight` 的有关文档（https://golang.google.cn/pkg/strings/#TrimRight）。
+`strings.TrimRight` 的有关文档（https://pkg.go.dev/strings/#TrimRight）。
 
-`strings.Trim` 的有关文档（https://golang.google.cn/pkg/strings/#Trim）。
+`strings.Trim` 的有关文档（https://pkg.go.dev/strings/#Trim）。

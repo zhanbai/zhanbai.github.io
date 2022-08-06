@@ -95,6 +95,6 @@ fmt.Println(strings.Join(arrayReverse(strings.Split(s, " ")), " "))
 
 ## 参见
 
-`strings.Split` 的有关文档（https://golang.google.cn/pkg/strings/#Split）。
+`strings.Split` 的有关文档（https://pkg.go.dev/strings/#Split）。
 
-`strings.Join` 的有关文档（https://golang.google.cn/pkg/strings/#Join）。
+`strings.Join` 的有关文档（https://pkg.go.dev/strings/#Join）。
