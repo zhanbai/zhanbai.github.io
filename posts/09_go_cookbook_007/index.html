@@ -116,7 +116,7 @@ With Tabs: 白日依山尽 黄河入海流 欲穷千里目 更上一层楼 With 
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></div><p>这两个函数都取一个字符串作为参数，并返回适当修改后的字符串。</p><h2 id=讨论>讨论
 <a class=heading-link href=#%e8%ae%a8%e8%ae%ba><i class="fa fa-link" aria-hidden=true></i></a></h2><p>这两个函数都假设每 8 个空格一个制表位，不过可以通过改变 <code>ts</code> 变量的设置来重新设定。</p><p><code>tabExpand</code> 中的正则表达式可以匹配一组制表符，也可以匹配文本行中这组制表符之前的所有文本。之所以需要匹配制表符前的文本，是因为这个文本的长度会影响制表符要替换为多少个空格，从而保证后续的文本能够与下一个制表位对齐。这个函数并不只是把每个制表符替换为 8 个空格，它会调整制表符后的文本，与制表位对齐。</p><p>类似地，<code>tabUnexpand</code> 不只是查看 8 个连续的空格并将它们替换为一个制表符。它会把各个文本行分解为 8 字符的字符块，然后将这些字符块中的末尾空白符（至少两个空格）替换为制表符。这样不仅可以保证文本与制表位对齐，还可以节省字符串空间。</p><h2 id=参见>参见
-<a class=heading-link href=#%e5%8f%82%e8%a7%81><i class="fa fa-link" aria-hidden=true></i></a></h2><p><code>strings.Replace</code> 的有关文档（https://golang.google.cn/pkg/strings/#Replace）。</p><p><code>Regexp.ReplaceAllStringFunc</code> 的有关文档（https://golang.google.cn/pkg/regexp/#Regexp.ReplaceAllStringFunc）。</p><p><code>Regexp.ReplaceAllString</code> 的有关文档（https://golang.google.cn/pkg/regexp/#Regexp.ReplaceAllString）。</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+<a class=heading-link href=#%e5%8f%82%e8%a7%81><i class="fa fa-link" aria-hidden=true></i></a></h2><p><code>strings.Replace</code> 的有关文档（https://pkg.go.dev/strings/#Replace）。</p><p><code>Regexp.ReplaceAllStringFunc</code> 的有关文档（https://pkg.go.dev/regexp/#Regexp.ReplaceAllStringFunc）。</p><p><code>Regexp.ReplaceAllString</code> 的有关文档（https://pkg.go.dev/regexp/#Regexp.ReplaceAllString）。</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2022
 展白
 ·
