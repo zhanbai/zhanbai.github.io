@@ -1,31 +1,14 @@
 <?php
-// $sales = [
-//     ['Northeast', '2022-01-01', '2022-02-01', '12.54'],
-//     ['Northwest', '2022-01-01', '2022-02-01', '564.33'],
-//     ['Southeast', '2022-01-01', '2022-02-01', '93.26'],
-//     ['Southwest', '2022-01-01', '2022-02-01', '945.21'],
-//     ['All Regions', '--', '--', '1597.34'],
-// ];
+$books = [
+    ['Elmer Gantry', 'Sinclair Lewis', 1927],
+    ["The Scarlatti Inheritance", "Robert Ludlum", "1971"],
+    ["The Parsifal Mosaic", "William Styron", "1979"],
+];
 
-// $fh = fopen('php://output', 'w');
-
-// foreach ($sales as $sales_line) {
-//     if (fputcsv($fh, $sales_line) === false) {
-//         die("Can't write CSV line");
-//     }
-// }
-
-// fclose($fh);
-
-$fp = fopen('./csv.txt', 'r');
-
-print "<table>\n";
-while ($csv_line = fgetcsv($fp)) {
-    print '<tr>';
-    for ($i = 0, $j = count($csv_line); $i < $j; $i++) {
-        print '<td>' . htmlentities($csv_line[$i]) . '</td>';
-    }
-    print "</tr>\n";
+foreach ($books as $book) {
+    // print pack('A25A15A4', $book[0], $book[1], $book[2]) . "\n";
+    $title = str_pad(substr($book[0], 0, 25), 25, '.');
+    $author = str_pad(substr($book[1], 0, 15), 15, '.');
+    $year = str_pad(substr($book[2], 0, 4), 4, '.');
+    print "$title$author$year\n";
 }
-
-print "</table>\n";
